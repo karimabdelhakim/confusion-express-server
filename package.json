@@ -1,9 +1,12 @@
 {
-  "name": "rest-server",
-  "version": "0.0.0",
+  "name": "node-rest-server",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "4.4.7"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
@@ -21,5 +24,18 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.0.0",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "description": "rest server for web app only till now",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karimabdelhakim/confusion-express-server.git"
+  },
+  "author": "karim-abdelhakim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karimabdelhakim/confusion-express-server/issues"
+  },
+  "homepage": "https://github.com/karimabdelhakim/confusion-express-server#readme"
 }
