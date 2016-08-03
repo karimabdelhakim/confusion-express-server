@@ -9,7 +9,7 @@ var passport = require('passport');
 var authenticate = require('./authenticate')
 var config = require('./config');
 
-mongoose.connect(config.mongoUrl);
+mongoose.connect(config.mongoUrl);  //use config.mongoLab for same db but on mlab.com
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
@@ -30,7 +30,7 @@ var app = express();
 // Secure traffic only
 app.all('*', function(req, res, next){
     console.log('req start: ',req.secure, req.hostname, req.url, app.get('port'));
-  if (true) {             //req.secure
+  if (req.secure) {
     return next();
   };
 
