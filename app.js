@@ -9,7 +9,8 @@ var passport = require('passport');
 var authenticate = require('./authenticate')
 var config = require('./config');
 
-mongoose.connect(config.mongoUrl);  //use config.mongoLab for same db but on mlab.com
+//use config.mongoLab for same db but on mlab.com, check config.js for more info
+mongoose.connect(config.mongoUrl);  
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
